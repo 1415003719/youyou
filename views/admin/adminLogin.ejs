@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>优优后台管理</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+	<style type="text/css">
+			.header{
+    width: 100%;
+    height: 60px;
+    background-color: #1e89e0;
+    color: #fff;
+  }
+  h1 a{
+    font-size: 30px;
+    display: inline-block;
+    height:100%;
+    float: left;
+    margin-right: 20px;
+    color: #fff;
+  }
+  a,a:hover,a:visited,a:active,a:focus{
+  	color: #fff;
+  	text-decoration: none;
+  }
+  .warn{
+  	color: red;
+  }
+  .adminLoginForm{
+  		margin-top: 30px;
+  }
+  h5{
+  	text-align: center;
+  }
+	</style>
+</head>
+<body>
+		<div class="header">
+			<div class="container">
+      <h1><a href="/admin">优优后台管理</a></h1>
+    </div>
+		</div>
+		<div class="register">
+				<div class="container">
+					<form class="form-horizontal adminLoginForm" action="/admin/checkLogin" method="post">
+						<% if (msg) { %>
+						  <h5><%= msg %></h5>
+						<% } %>
+			  <div class="form-group">
+			    <label for="name" class="col-sm-4 control-label">登录名</label>
+			    <div class="col-sm-3">
+			      <input type="text" name="name" class="form-control" id="name" placeholder="登录名">
+			    </div>
+			  </div>
+			  			  <div class="form-group">
+			    <label for="password" class="col-sm-4 control-label">密码</label>
+			    <div class="col-sm-3">
+			      <input type="password" class="form-control" id="password" placeholder="密码">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-4 col-sm-2">
+			      <button type="submit" class="btn btn-default">登录</button>
+			    </div>
+			  </div>
+			</form>
+				</div>
+		</div>
+<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+</body>
+</html>
